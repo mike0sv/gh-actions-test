@@ -75,6 +75,6 @@ def test_upload_and_download_file(run_s3_docker, docker_host):
         s3.upload_fileobj(io.BytesIO(b'kek'), BUCKET, KEY)
         buffer = io.BytesIO()
         s3.download_fileobj(BUCKET, KEY, buffer)
-        assert b'kek' == buffer.getvalue()
+        assert b'kek2' == buffer.getvalue()
     except EndpointConnectionError as e:
         pytest.fail(str(e))
