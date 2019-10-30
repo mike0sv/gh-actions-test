@@ -1,0 +1,4 @@
+boto3
+docker
+pytest
+testcontainers==2.3
